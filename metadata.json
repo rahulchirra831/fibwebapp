@@ -1,0 +1,6 @@
+{
+  "name": "fitness mobile",
+  "description": "FitShark: A React and Tailwind CSS application for a fitness platform. This showcases a modern landing page, exercise categories, equipment-based filtering, and various utility widgets for health and workout tracking.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

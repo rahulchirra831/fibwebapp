@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitShark UI</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://images.hdqwalls.com">
+    <link rel="preconnect" href="https://r4.wallpaperflare.com">
+    <link rel="preconnect" href="https://ik.imagekit.io">
+    <link rel="preconnect" href="https://ai.prototypr.io">
+    <link rel="preload" as="image" href="https://ai.prototypr.io/checkout/upload_file/shared/e4a762c1-3fd1-4bdc-a525-429e6612c67e.png" type="image/png">
+    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/rahulchirra/workout-plan-@6f90d569edf3c54a3d6b806aabf0208e97730d8b/pics/SaveInsta.to_491441775_18053864987345795_6146742127808357522_n.jpg" type="image/jpeg">
+    <link rel="preload" as="image" href="https://ik.imagekit.io/coxftihos/main%20images/akuma-returns-9j-5120x2880.jpg?updatedAt=1749120251808" type="image/jpeg">
+    <link rel="preload" as="image" href="https://ik.imagekit.io/coxftihos/main%20images/cosmic-pillars-purple-horizon-reflections-ch-5120x2880.jpg?updatedAt=1749120256853" type="image/jpeg">
+    <link rel="preload" as="image" href="https://ik.imagekit.io/coxftihos/main%20images/eagle-soaring-above-ancient-world-xu-3840x2400.jpg?updatedAt=1749120254985" type="image/jpeg">
+    <link rel="preload" as="image" href="https://ik.imagekit.io/coxftihos/main%20images/the-lunar-guardian-1g-3840x2400.jpg?updatedAt=1749121991238" type="image/jpeg">
+    <link rel="preload" as="image" href="https://ik.imagekit.io/coxftihos/main%20images/the-dark-wanderer-hv-5120x2880.jpg?updatedAt=1749122865255" type="image/jpeg">
+    <link rel="preload" as="image" href="https://ik.imagekit.io/coxftihos/main%20images/wallpaperflare.com_wallpaper%20(4).jpg?updatedAt=1749124862132" type="image/jpeg">
+    <link rel="preload" as="image" href="https://ik.imagekit.io/coxftihos/main%20images/the-last-of-us-part-ii-fan-art-ld-3840x2400.jpg?updatedAt=1749185091955" type="image/jpeg">
+    <link rel="preload" as="image" href="https://ik.imagekit.io/coxftihos/inferno-queen-power-unleashed-an-2160x3840.jpg?updatedAt=1749199910182" type="image/jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable class-based dark mode
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#5D3EBE', // Bright Purple
+                light: '#7C5CDE', // Lighter Purple
+                dark: '#4A2F9C',  // Darker Purple
+              },
+              secondary: {
+                DEFAULT: '#2EC5CE', // Teal
+                light: '#6FE3EA',   // Lighter Teal
+                dark: '#25A2AA',    // Darker Teal
+              },
+              neon: { // Added neon colors for carousel
+                pink: '#FF00E5',
+                cyan: '#00FFFF',
+                lime: '#7FFF00',
+              },
+              neutral: {
+                light: '#F8F9FA',     // Used for light theme backgrounds
+                DEFAULT: '#6C757D',   // Used for medium text
+                dark: '#343A40',      // Used for dark text on light backgrounds
+                darker: '#212529',    // Used for very dark text or subtle dark backgrounds
+                // Dark mode specific shades - Adjusted for a lighter "semi-transparent dark" feel
+                50: '#F9FAFB',  // off-white (dark mode text)
+                100: '#F3F4F6', // very light gray (dark mode text)
+                200: '#E5E7EB', // light gray
+                300: '#D1D5DB', // (dark mode secondary text)
+                400: '#9CA3AF', // (dark mode subtle text/icons)
+                500: '#6B7280', // (dark mode borders - more visible, was #333333) - Tailwind gray-500
+                600: '#4B5563', // (dark mode hover states, subtle borders, was #1D1D1D) - Tailwind gray-600
+                700: '#374151', // (dark mode elevated cards/surfaces, was #121212) - Tailwind gray-700
+                800: '#1F2937', // (dark mode main card backgrounds / section backgrounds, was #0A0A0A) - Tailwind gray-800
+                900: '#111827', // (dark mode main page background - was #000000, pure black) - Tailwind gray-900
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'], 
+              orbitron: ['Orbitron', 'sans-serif'], // Added Orbitron
+            },
+            animation: {
+              fadeIn: 'fadeIn 0.5s ease-out forwards',
+              'ios-widget-enter': 'ios-widget-enter 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards',
+              'ios-widget-modal-enter': 'ios-widget-modal-enter 0.4s cubic-bezier(0.3, 0.9, 0.3, 1.1) forwards',
+              'subtlePopIn': 'subtlePopIn 0.3s ease-out forwards',
+              'notification-enter': 'notification-enter 0.35s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards',
+              'notification-exit': 'notification-exit 0.3s ease-out forwards',
+              'pulseGlow': 'pulseGlow 2.5s infinite ease-in-out',
+              'carouselCardEnter': 'carouselCardEnter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+              'neonPulse': 'neonPulse 1.5s infinite alternate',
+              'socialIconBounceAndGlow': 'socialIconBounceAndGlow 0.6s ease-out forwards', // New animation
+            },
+            keyframes: {
+              fadeIn: {
+                'from': { opacity: 0 },
+                'to': { opacity: 1 },
+              },
+              'ios-widget-enter': {
+                '0%': { opacity: 0, transform: 'translateY(30px) scale(0.95)' },
+                '100%': { opacity: 1, transform: 'translateY(0) scale(1)' },
+              },
+              'ios-widget-modal-enter': {
+                '0%': { opacity: 0, transform: 'translateY(40px) scale(0.9)' },
+                '100%': { opacity: 1, transform: 'translateY(0) scale(1)' },
+              },
+              subtlePopIn: { 
+                '0%': { opacity: 0, transform: 'scale(0.98) translateY(5px)' },
+                '100%': { opacity: 1, transform: 'scale(1) translateY(0)' },
+              },
+              'notification-enter': {
+                '0%': { opacity: 0, transform: 'translateY(-20px) scale(0.95)' },
+                '100%': { opacity: 1, transform: 'translateY(0) scale(1)' },
+              },
+              'notification-exit': {
+                '0%': { opacity: 1, transform: 'translateY(0) scale(1)' },
+                '100%': { opacity: 0, transform: 'translateY(-20px) scale(0.95)' },
+              },
+              pulseGlow: {
+                '0%, 100%': { 
+                  transform: 'scale(1)',
+                  boxShadow: '0 0 10px 3px rgba(var(--color-primary-glow-rgb),0.15), 0 0 20px 7px rgba(var(--color-primary-glow-rgb),0.08)',
+                },
+                '50%': { 
+                  transform: 'scale(1.03)',
+                  boxShadow: '0 0 15px 5px rgba(var(--color-primary-glow-rgb),0.25), 0 0 30px 10px rgba(var(--color-primary-glow-rgb),0.12)',
+                },
+              },
+              carouselCardEnter: { 
+                '0%': { opacity: 0, transform: 'perspective(1000px) rotateY(30deg) scale(0.9)' },
+                '100%': { opacity: 1, transform: 'perspective(1000px) rotateY(0deg) scale(1)' },
+              },
+              neonPulse: { 
+                '0%': { boxShadow: '0 0 5px var(--tw-shadow-color), 0 0 10px var(--tw-shadow-color), 0 0 15px var(--tw-shadow-color)' },
+                '100%': { boxShadow: '0 0 10px var(--tw-shadow-color), 0 0 20px var(--tw-shadow-color), 0 0 30px var(--tw-shadow-color)' },
+              },
+              socialIconBounceAndGlow: { // New keyframes
+                '0%': { transform: 'scale(1)', boxShadow: 'none' },
+                '30%': { transform: 'scale(1.3)' },
+                '60%': { transform: 'scale(0.9)', boxShadow: '0 0 18px 5px var(--glow-color, rgba(255,255,255,0.7))' },
+                '100%': { transform: 'scale(1)', boxShadow: 'none' },
+              },
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      :root {
+        --color-primary: #5D3EBE;
+        --color-primary-light: #7C5CDE; 
+        --color-primary-dark: #4A2F9C;
+        --color-primary-rgb: 93, 62, 190; /* Updated for #5D3EBE */
+        --color-primary-light-rgb: 124, 92, 222; /* Updated for #7C5CDE */
+        --color-primary-glow-rgb: var(--color-primary-rgb); 
+      }
+      html.dark {
+         --color-primary-glow-rgb: var(--color-primary-light-rgb); 
+      }
+      .animation-delay-200 {
+        animation-delay: 0.2s;
+      }
+      .animation-delay-400 {
+        animation-delay: 0.4s;
+      }
+      .animation-delay-600 {
+        animation-delay: 0.6s;
+      }
+      .animation-delay-800 { 
+        animation-delay: 0.8s;
+      }
+      .animate-pulseGlow { 
+        animation-name: pulseGlow;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+      .hero-main-title {
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7), 0 0 8px rgba(200, 220, 255, 0.2);
+        transition: text-shadow 0.3s ease-out;
+        cursor: default; 
+      }
+
+      .hero-main-title:hover {
+        text-shadow: 0px 0px 1px rgba(0,0,0,0.6), 
+                     0 0 12px rgba(220, 230, 255, 0.45), 
+                     0 0 20px rgba(200, 210, 255, 0.3), 
+                     0 0 30px rgba(0,0,0,0.2); 
+      }
+
+      /* Custom scrollbar for webkit browsers (used in ImagePopupModal carousel) */
+      .custom-scrollbar::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(var(--color-primary-light-rgb), 0.6);
+        border-radius: 10px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(var(--color-primary-light-rgb), 0.8);
+      }
+      html.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+         background: rgba(var(--color-primary-rgb), 0.6);
+      }
+       html.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+         background: rgba(var(--color-primary-rgb), 0.8);
+      }
+
+      /* Scroll Snap for Carousel */
+      .carousel-snap {
+        scroll-snap-type: x mandatory;
+      }
+      .carousel-snap-item {
+        scroll-snap-align: center;
+        flex: 0 0 auto; /* Ensure items don't shrink or grow */
+      }
+      
+      /* New Social Icon Styles */
+      .social-link-item.animate-active {
+        /* This class will be toggled by JS to trigger the animation */
+        /* The animation 'socialIconBounceAndGlow' is defined in tailwind.config */
+      }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/AnimatedWorkoutButton.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "styled-components": "https://esm.sh/styled-components@^6.1.18"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
